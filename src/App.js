@@ -11,8 +11,8 @@ import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Fade from '@mui/material/Fade';
 import React from 'react';
-import Carte from './Components/Carte';
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
+import AgeDefine from './components/AgeDefine';
 
 function ScrollTop(props) {
   const { children, window } = props;
@@ -59,7 +59,7 @@ ScrollTop.propTypes = {
   window: PropTypes.func,
 };
 
-export default function App(props) {
+function App(props) {
   return (
     <React.Fragment>
       <CssBaseline />
@@ -72,19 +72,11 @@ export default function App(props) {
       </AppBar>
       <Toolbar id="back-to-top-anchor" />
       <Container>
-        <Box sx={{ my: 2 }}>
-          <Grid2 container spacing={2}>
+        <Box sx={{ my: 2}}>
+          <Grid2 container spacing={2}
+          sx={{ justifyContent: 'center' }}>
             <Grid2>
-              <Carte />
-            </Grid2>
-            <Grid2>
-              <Carte />
-            </Grid2>
-            <Grid2>
-              <Carte />
-            </Grid2>
-            <Grid2>
-              <Carte />
+              <AgeDefine />
             </Grid2>
           </Grid2>
         </Box>
@@ -99,4 +91,4 @@ export default function App(props) {
   );
 }
 
-// export default App;
+export default App;
