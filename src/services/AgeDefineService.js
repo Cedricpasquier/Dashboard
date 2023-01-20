@@ -1,17 +1,7 @@
-import { useState } from "react";
+export const calculateAge = (name) => {
+  return fetch("https://api.agify.io?name=" + name)
+    .then((response) => response.json())
+    .catch((error) => console.log(error));
+};
 
-async function getAPIAge(name) {
-    const [data,setData]=useState([]);
-
-    try {
-        const response = await fetch('https://api.agify.io?name=' + name);
-        setData(await response.json());
-        console.log(data);
-        return data;
-    } catch (err) {
-        return [];
-    }
-}
-
-
-export default getAPIAge;
+export default calculateAge;
