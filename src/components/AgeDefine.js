@@ -7,10 +7,9 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
-import calculateAge from "../services/AgeDefineService";
+import calculateAge from "../services/ToolsService";
 
 function AgeDefine() {
-  const [age, setAge] = useState(0);
   const [name, setName] = useState("");
 
   function estimateAge() {

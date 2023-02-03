@@ -13,6 +13,7 @@ import Fade from '@mui/material/Fade';
 import React from 'react';
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 import AgeDefine from './components/AgeDefine';
+import WeatherCard from './components/WeatherCard';
 
 function ScrollTop(props) {
   const { children, window } = props;
@@ -77,6 +78,9 @@ function App(props) {
           sx={{ justifyContent: 'center' }}>
             <Grid2>
               <AgeDefine />
+            </Grid2>
+            <Grid2>
+              <WeatherCard />
             </Grid2>
           </Grid2>
         </Box>
